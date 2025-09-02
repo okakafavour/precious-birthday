@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 import BirthdayCard from "./components/BirthdayCard";
-import Wishes from "./components/wishes";
+// import Wishes from "./components/wishes"; // remove this
+import BirthdayMessage from "./components/BirthdayMessage"; // new message
 import MediaSection from "./components/Mediasection";
 
 function App() {
@@ -26,7 +27,6 @@ function App() {
     "/images/photo5.jpeg",
     "/images/photo6.jpeg",
     "/images/photo7.jpeg",
-    "/images/photo8.jpeg",
     "/images/photo9.jpeg",
     "/images/photo10.jpeg",
     "/images/photo11.jpeg",
@@ -48,7 +48,8 @@ function App() {
   ];
 
   const videos = [
-    "/videos/special.mp4",  ];
+    "/videos/special.mp4",
+  ];
 
   return (
     <div style={{ fontFamily: "sans-serif", background: "#fffaf0", minHeight: "100vh", padding: "20px" }}>
@@ -61,8 +62,13 @@ function App() {
         wind={0.01}
       />
 
+      {/* Birthday Header */}
       <BirthdayCard name="NAZA 🌹" />
-      <Wishes />
+
+      {/* Animated Birthday Message */}
+      <BirthdayMessage />
+
+      {/* Gallery & Videos */}
       <MediaSection images={images} videos={videos} />
     </div>
   );

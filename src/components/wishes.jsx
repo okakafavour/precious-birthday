@@ -1,29 +1,57 @@
 import React from "react";
 
-const Wishes = () => {
+const Balloon = ({ left, delay, emoji, size }) => {
   return (
     <div
       style={{
+        position: "absolute",
+        bottom: "-50px",
+        left: `${left}%`,
+        fontSize: `${size}rem`,
+        animation: `floatUp 6s linear ${delay}s infinite`,
+      }}
+    >
+      {emoji}
+    </div>
+  );
+};
+
+const Wishes = () => {
+  const balloons = [
+    { left: 10, delay: 0, emoji: "🎈", size: 2 },
+    { left: 30, delay: 1, emoji: "🎉", size: 2.5 },
+    { left: 50, delay: 2, emoji: "🎈", size: 2 },
+    { left: 70, delay: 0.5, emoji: "🎉", size: 2 },
+    { left: 85, delay: 1.5, emoji: "🎈", size: 2.3 },
+  ];
+
+  return (
+    <div
+      style={{
+        position: "relative",
         display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
         justifyContent: "center",
         width: "100%",
         padding: "20px",
         boxSizing: "border-box",
         marginBottom: "50px",
+        overflow: "hidden", // keep balloons contained
+        zIndex: 10,
       }}
     >
       <div
         style={{
           maxWidth: "600px",
           width: "100%",
-          background: "#ffffff", // solid background
-          color: "#4b0082", // dark purple text
+          background: "#ffffff",
+          color: "#4b0082",
           padding: "25px",
           borderRadius: "20px",
           boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
           textAlign: "center",
+          position: "relative",
+          zIndex: 20, // ensures card is above balloons
+          animation: "bounce 1.5s infinite alternate",
         }}
       >
         <h2
@@ -49,6 +77,25 @@ const Wishes = () => {
           wonderful girlfriend and brightening my life. 💌
         </p>
       </div>
+
+      {/* Floating Balloons */}
+      {balloons.map((b, idx) => (
+        <Balloon key={idx} {...b} />
+      ))}
+
+      {/* Keyframes for animations */}
+      <style>{`
+        @keyframes bounce {
+          0% { transform: translateY(0px); }
+          100% { transform: translateY(-15px); }
+        }
+
+        @keyframes floatUp {
+          0% { transform: translateY(0); opacity: 0; }
+          10% { opacity: 1; }
+          100% { transform: translateY(-300px); opacity: 0; }
+        }
+      `}</style>
     </div>
   );
 };
