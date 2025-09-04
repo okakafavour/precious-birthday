@@ -39,7 +39,7 @@ const MediaSection = ({ images, videos }) => {
       {images && images.length > 0 && (
         <div>
           <h2 style={{ fontSize: "2rem", marginBottom: "20px", color: "#4b0082" }}>
-            Our Memories 📸
+             Memories 📸
           </h2>
 
           <div
