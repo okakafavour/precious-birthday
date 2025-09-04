@@ -45,10 +45,13 @@ function App() {
     "/images/photo24.jpeg",
     "/images/photo25.jpeg",
     "/images/photo26.jpeg",
+    "/images/photo27.jpeg",
+    "/images/photo28.jpeg",
+    "/images/photo29.jpeg",
   ];
 
   const videos = [
-    "/videos/special.mp4",
+    "/videos/only_her.mp4",
   ];
 
   return (
