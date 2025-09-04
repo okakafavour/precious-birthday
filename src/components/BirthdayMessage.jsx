@@ -9,7 +9,7 @@ const Balloon = ({ left, delay, emoji }) => {
         left: `${left}%`,
         fontSize: "2rem",
         animation: `floatUp 6s linear ${delay}s infinite`,
-        zIndex: 5, // behind card
+        zIndex: 5,
       }}
     >
       {emoji}
@@ -36,7 +36,7 @@ const BirthdayMessage = () => {
         margin: "50px 0",
         zIndex: 10,
         overflow: "hidden",
-        minHeight: "350px", // more room for balloons
+        minHeight: "350px",
       }}
     >
       {/* Animated Card */}
@@ -50,12 +50,13 @@ const BirthdayMessage = () => {
           boxShadow: "0 8px 30px rgba(0,0,0,0.25)",
           textAlign: "center",
           animation: "bounce 1.5s infinite alternate",
-          zIndex: 20, // always above balloons
+          zIndex: 20,
         }}
       >
         <h2
           style={{
-            fontSize: "clamp(1.5rem, 5vw, 2rem)", // responsive font
+            fontFamily: "'Dancing Script', cursive", // 🎨 fancy font
+            fontSize: "clamp(1.8rem, 6vw, 2.5rem)",
             color: "#d63384",
             marginBottom: "15px",
             textShadow: "1px 1px 3px rgba(0,0,0,0.4)",
@@ -65,7 +66,8 @@ const BirthdayMessage = () => {
         </h2>
         <p
           style={{
-            fontSize: "clamp(1rem, 4vw, 1.2rem)", // responsive font
+            fontFamily: "'Poppins', sans-serif", // ✨ clean font
+            fontSize: "clamp(1rem, 4vw, 1.3rem)",
             lineHeight: "1.6",
             color: "#4b0082",
             textShadow: "1px 1px 2px rgba(0,0,0,0.3)",

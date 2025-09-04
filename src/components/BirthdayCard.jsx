@@ -6,11 +6,12 @@ const BirthdayCard = ({ name }) => {
     <div
       style={{
         width: "100%",
-        padding: "50px 20px", // increased padding for bigger picture frame
+        padding: "50px 20px",
         background: "linear-gradient(to right, #ffc0cb, #dda0dd, #fffacd)",
         textAlign: "center",
         borderRadius: "0 0 25px 25px",
         boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+        fontFamily: "'Poppins', sans-serif", // default for text
       }}
     >
       {/* Birthday Cake Icon */}
@@ -24,6 +25,7 @@ const BirthdayCard = ({ name }) => {
           fontSize: "3rem",
           marginBottom: "20px",
           color: "#4b0082",
+          fontFamily: "'Dancing Script', cursive", // stylish font for heading
         }}
       >
         🎉 Happy Birthday {name}! 🌹 🎉
@@ -52,6 +54,7 @@ const BirthdayCard = ({ name }) => {
           fontSize: "2rem",
           marginBottom: "15px",
           color: "#ff1493",
+          fontFamily: "'Dancing Script', cursive", // stylish font
         }}
       >
         A Few Things About You ✨

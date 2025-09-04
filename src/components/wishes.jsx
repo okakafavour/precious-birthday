@@ -35,7 +35,7 @@ const Wishes = () => {
         padding: "20px",
         boxSizing: "border-box",
         marginBottom: "50px",
-        overflow: "hidden", // keep balloons contained
+        overflow: "hidden",
         zIndex: 10,
       }}
     >
@@ -50,15 +50,16 @@ const Wishes = () => {
           boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
           textAlign: "center",
           position: "relative",
-          zIndex: 20, // ensures card is above balloons
+          zIndex: 20,
           animation: "bounce 1.5s infinite alternate",
         }}
       >
         <h2
           style={{
+            fontFamily: "'Dancing Script', cursive", // 🎨 fancy handwritten style
             color: "#d63384",
             marginBottom: "15px",
-            fontSize: "1.8rem",
+            fontSize: "clamp(1.6rem, 5vw, 2.2rem)",
             lineHeight: "1.3",
             textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
           }}
@@ -67,7 +68,8 @@ const Wishes = () => {
         </h2>
         <p
           style={{
-            fontSize: "1.2rem",
+            fontFamily: "'Poppins', sans-serif", // ✨ clean style
+            fontSize: "clamp(1rem, 4vw, 1.3rem)",
             lineHeight: "1.6",
             textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
             margin: 0,
